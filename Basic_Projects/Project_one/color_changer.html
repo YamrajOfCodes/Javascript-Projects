@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorChanger</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            height: 7vh;
+            background-color: #eee;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+        button{
+            padding: 8px 10px;
+        }
+       .gray{
+        background-color: #ccc;
+        border: 1px solid #aaaaaa;
+        padding: 8px 44px;
+       }
+       section{
+        height: 50vh;
+        display: grid;
+        place-content: center;
+       }
+       div{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+       }
+       .container{
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+        gap:14px;
+        width: 100%;
+        border: none;
+       }
+       h2{
+        margin-bottom: 2vh;
+       }
+       .grayy{
+        background-color: gray;
+       }
+       .blue{
+        background-color: blue;
+       }
+       .yellow{
+        background-color: yellow;
+       }
+       .white{
+        background: white;
+       }
+       .yellow,.grayy,.blue,.white,button{
+        cursor: pointer;
+       }
+       h4{
+        margin-top: 4vh;
+       }
+       a{
+        text-decoration: none;
+        color: black;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="gray"><a href="#">Home</a></button>
+            <button><a href="#">Youtube Channel</a></button>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Color Scheme Switcher</h2>
+        <div class="container">
+            <div class="grayy button"></div>
+        <div class="white button"></div>
+        <div class="blue button"></div>
+        <div class="yellow button"></div>
+        </div>
+        <h4>Try Clicking one of the color above to change <br> background color of this page</h4>
+    </section>
+</body>
+<script>
+
+    const gray_color=document.querySelector(".grayy");
+    const white_color=document.querySelector(".white");
+    const blue_color=document.querySelector(".blue");
+    const yellow_color=document.querySelector(".yellow");
+
+    gray_color.addEventListener('click',()=>{
+        document.body.style.backgroundColor="gray";
+    })
+    white_color.addEventListener('click',()=>{
+        document.body.style.backgroundColor="white";
+    })
+    blue_color.addEventListener('click',()=>{
+        document.body.style.backgroundColor="blue";
+    })
+    yellow_color.addEventListener('click',()=>{
+        document.body.style.backgroundColor="yellow";
+    })
+
+
+
+</script>
+</html>
