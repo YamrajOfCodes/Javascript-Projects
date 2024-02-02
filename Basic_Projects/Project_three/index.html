@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Time</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(51, 51, 51);
+        }
+    a{
+        text-decoration: none;
+        color: black;
+       }
+       header{
+            height: 7vh;
+            background-color: #eee;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            padding: 6px 11px;
+        }
+        .gray{
+        background-color: #ccc;
+        border: 1px solid #aaaaaa;
+        padding: 8px 44px;
+       }
+       .color{
+        height: auto;
+        width:auto;
+        padding: 8px 14px;
+        border-radius: 4px;
+        background-color: rgb(255, 238, 0);
+        color:black;
+        text-align: center;
+    }
+    .container{
+        height: 70vh;
+        width:100vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    h4{
+        color:#fff
+    }
+  
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="gray"><a href="#">Home</a></button>
+            <button><a href="#">Youtube Channel</a></button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h4>Your Local Time</h4>
+        <div class="color"></div>
+    </div>
+
+</body>
+
+<script>
+    const addTime=document.querySelector(".color");
+
+    
+    setInterval(() => {
+        
+        const Time= new Date().toLocaleTimeString();
+        addTime.innerHTML=Time
+    }, 1000);
+
+</script>
+</html>
