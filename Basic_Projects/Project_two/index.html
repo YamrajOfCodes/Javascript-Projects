@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<style>
+     *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    a{
+        text-decoration: none;
+        color: black;
+       }
+       header{
+            height: 7vh;
+            background-color: #eee;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+        button{
+            padding: 8px 10px;
+        }
+        .gray{
+        background-color: #ccc;
+        border: 1px solid #aaaaaa;
+        padding: 8px 44px;
+       }
+       section{
+        height: 50vh;
+        width:100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        justify-content: center;
+        align-items: center;
+       }
+       div{
+        margin-top: 2vh;
+       }
+       .cta-one{
+        margin: 20px 0px 24px 94px;
+        cursor: pointer;
+       }
+     
+</style>
+<body>
+    <header>
+        <nav>
+            <button class="gray"><a href="#">Home</a></button>
+            <button><a href="#">Youtube Channel</a></button>
+        </nav>
+    </header>
+
+    <section>
+        <h1>BMI Calculator</h1>
+        <form action="#">
+       <div>
+        <label for="height">Height in CM</label>
+        <input type="text" id="height" value="">
+       </div>
+            <div>
+                <label for="weight">Weight in KG</label>
+            <input type="text" id="weight" value="" >
+            </div>
+            <div>
+                <label for="Result">Resultt</label>
+                <div id="Result" style="width: 100px; border: 1px solid black; height: 30px;"></div>
+               </div>
+            <button class="cta-one">Calculate</button>
+        </form>
+    </section>
+
+</body>
+
+<script>
+
+    const height=document.getElementById('height');
+    const weight=document.getElementById('weight');
+    const result=document.getElementById('Result');
+    
+    const cta=document.querySelector(".cta-one");
+
+    cta.addEventListener('click',(e)=>{
+        const val1=Number(height.value);
+        const val2=Number(weight.value);
+         result.appendChild(document.createTextNode(val2/val1));
+
+    })
+
+</script>
+</html>
